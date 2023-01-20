@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HandelsTrader</title>
+  </head>
+  <body>
+    <!-- ====== Navbar Section Start -->
+    <header class="w-full bg-white shadow-lg">
+      <div class="bg-secondary py-2 text-sm text-center">
+        <span class="font-bold"></span>
+        Due to high demand we will be forced to close registration on
+        <span class="font-bold ml-1">2023/12/01 - Hurry!</span>
+        <span class="countdown">9:34</span>
+      </div>
+      <div class="container mx-auto">
+        <div class="w-48 max-w-full px-4">
+          <a href="" class="block w-full py-5">
+            <img src="src/assets/img/logo.png" alt="logo" class="w-full" />
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- ====== Navbar Section End -->
+
+    <!-- ====== Hero Section Start -->
+    <div
+      x-data="
+        {
+          videoOpen: false
+        }
+      "
+      class="relative z-10 bg-cover bg-center bg-no-repeat pt-[120px] pb-[110px] md:pt-[150px] lg:pt-[180px]"
+      style="background-image: linear-gradient(black, black), url('src/assets/img/hero.jpg'); background-blend-mode: saturation"
+    >
+      <div class="bg-dark absolute top-0 left-0 -z-10 h-full w-full bg-opacity-[45%]"></div>
+      <div class="container mx-auto">
+        <div class="-mx-4 flex flex-wrap items-center">
+          <div class="w-full px-4 lg:w-5/12">
+            <div class="hero-content">
+              <div class="mx-auto max-w-[460px] bg-white py-10 px-8 sm:px-10">
+                <h3 class="mb-2 text-2xl font-bold text-black sm:text-3xl lg:text-2xl xl:text-3xl">Profit now!</h3>
+                <p class="text-body-color mb-4 text-base font-medium">Open an account</p>
+                <div class="h-1.5 w-1/4 bg-primary mb-7"></div>
+                <form action="https://megachancenow.com/register" id="register" method="post" accept-charset="utf-8">
+                  <div class="-mx-2 flex flex-wrap">
+                    <div class="w-full px-2 sm:w-1/2">
+                      <div class="mb-4">
+                        <label for="user_first_name" class="mb-2 block text-sm font-semibold text-black">Name</label>
+                        <input
+                          type="text"
+                          name="user_first_name"
+                          class="border-form-stroke text-body-color focus:border-primary w-full border p-3 text-sm font-medium outline-none rounded-sm"
+                          placeholder="Enter a Name"
+                        />
+                      </div>
+                    </div>
+                    <div class="w-full px-2 sm:w-1/2">
+                      <div class="mb-4">
+                        <label for="user_last_name" class="mb-2 block text-sm font-semibold text-black">Surname</label>
+                        <input
+                          type="text"
+                          name="user_last_name"
+                          class="border-form-stroke text-body-color focus:border-primary w-full border p-3 text-sm font-medium outline-none rounded-sm"
+                          placeholder="Enter a Surname"
+                        />
+                      </div>
+                    </div>
+                    <div class="w-full px-2">
+                      <div class="mb-6">
+                        <label for="user_email" class="mb-2 block text-sm font-semibold text-black">Email</label>
+                        <input
+                          type="email"
+                          name="user_email"
+                          class="border-form-stroke text-body-color focus:border-primary w-full border p-3 text-sm font-medium outline-none rounded-sm"
+                          placeholder="Enter a Email"
+                        />
+                      </div>
+                    </div>
+                    <div class="w-full px-2">
+                      <div class="mb-6">
+                        <label for="user_password" class="mb-2 block text-sm font-semibold text-black">Password</label>
+                        <input
+                          type="password"
+                          name="user_password"
+                          class="border-form-stroke text-body-color focus:border-primary w-full border p-3 text-sm font-medium outline-none rounded-sm"
+                          placeholder="Enter a Password"
+                        />
+                      </div>
+                    </div>
+                    <div class="w-full px-2">
+                      <div class="mb-6">
+                        <label for="user_full_phone" class="mb-2 block text-sm font-semibold text-black">Phone</label>
+                        <div class="relative">
+                          <div class="w-[120px] absolute h-full z-10">
+                            <div class="h-full relative pl-2">
+                              <div
+                                class="select-country-dropdown-btn text-black w-full h-full flex items-center cursor-pointer text-sm gap-4"
+                                data-dial-code="+381"
+                              >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 85.333 512 341.333">
+                                  <path fill="#D80027" d="M0 85.331h512v341.337H0z"></path>
+                                  <path d="M0 85.331h512v113.775H0z"></path>
+                                  <path fill="#FFDA44" d="M0 312.882h512v113.775H0z"></path>
+                                </svg>
+                                <span>+49</span>
+                              </div>
+                              <span
+                                class="dropdown-arrow-icon border-black absolute right-4 top-1/2 mt-[-2px] h-2 w-2 -translate-y-1/2 rotate-45 border-r-2 border-b-2"
+                              ></span>
+                            </div>
+                            <ul
+                              class="select-country-dropdown hidden h-52 border border-form-stroke mt-2 bg-white w-64 text-black p-2 overflow-y-scroll overflow-x-hidden text-sm"
+                            ></ul>
+                          </div>
+                          <input
+                            type="tel"
+                            name="user_full_phone"
+                            class="border-form-stroke text-body-color focus:border-primary w-full border p-3 pl-32 text-sm font-medium outline-none rounded-sm"
+                            placeholder="60 123 4567"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-full px-2">
+                      <button
+                        class="submit-form-btn bg-primary flex w-full items-center justify-center px-3 py-4 text-sm font-semibold text-white rounded-sm"
+                      >
+                        Create Account
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="hidden px-4 lg:block lg:w-1/12"></div>
+          <div class="w-full px-4 lg:w-6/12">
+            <div class="mx-auto text-center">
+              <div class="relative z-10 mt-16 inline-block lg:mt-0">
+                <img src="/src/assets/img/intro.jpeg" alt="hero" class="mx-auto max-w-full rounded-sm" />
+                <div class="absolute inset-0 flex h-full w-full items-center justify-center">
+                  <a
+                    href="javascript:void(0)"
+                    @click="videoOpen = true"
+                    class="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white bg-opacity-75 duration-300 hover:bg-opacity-100 hover:shadow-xl"
+                  >
+                    <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.5 6.63397C12.1667 7.01888 12.1667 7.98112 11.5 8.36602L1.75 13.9952C1.08333 14.3801 0.249999 13.899 0.249999 13.1292L0.25 1.87083C0.25 1.10103 1.08333 0.619909 1.75 1.00481L11.5 6.63397Z"
+                        fill="#F58319"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <span class="absolute -right-6 -top-6 z-[-1]">
+                  <svg width="134" height="106" viewBox="0 0 134 106" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="1.66667" cy="104" r="1.66667" transform="rotate(-90 1.66667 104)" fill="#F58319" />
+                    <circle cx="16.3333" cy="104" r="1.66667" transform="rotate(-90 16.3333 104)" fill="#F58319" />
+                    <circle cx="31" cy="104" r="1.66667" transform="rotate(-90 31 104)" fill="#F58319" />
+                    <circle cx="45.6667" cy="104" r="1.66667" transform="rotate(-90 45.6667 104)" fill="#F58319" />
+                    <circle cx="60.3333" cy="104" r="1.66667" transform="rotate(-90 60.3333 104)" fill="#F58319" />
+                    <circle cx="88.6667" cy="104" r="1.66667" transform="rotate(-90 88.6667 104)" fill="#F58319" />
+                    <circle cx="117.667" cy="104" r="1.66667" transform="rotate(-90 117.667 104)" fill="#F58319" />
+                    <circle cx="74.6667" cy="104" r="1.66667" transform="rotate(-90 74.6667 104)" fill="#F58319" />
+                    <circle cx="103" cy="104" r="1.66667" transform="rotate(-90 103 104)" fill="#F58319" />
+                    <circle cx="132" cy="104" r="1.66667" transform="rotate(-90 132 104)" fill="#F58319" />
+                    <circle cx="1.66667" cy="89.3335" r="1.66667" transform="rotate(-90 1.66667 89.3335)" fill="#F58319" />
+                    <circle cx="16.3333" cy="89.3335" r="1.66667" transform="rotate(-90 16.3333 89.3335)" fill="#F58319" />
+                    <circle cx="31" cy="89.3335" r="1.66667" transform="rotate(-90 31 89.3335)" fill="#F58319" />
+                    <circle cx="45.6667" cy="89.3335" r="1.66667" transform="rotate(-90 45.6667 89.3335)" fill="#F58319" />
+                    <circle cx="60.3333" cy="89.3337" r="1.66667" transform="rotate(-90 60.3333 89.3337)" fill="#F58319" />
+                    <circle cx="88.6667" cy="89.3337" r="1.66667" transform="rotate(-90 88.6667 89.3337)" fill="#F58319" />
+                    <circle cx="117.667" cy="89.3337" r="1.66667" transform="rotate(-90 117.667 89.3337)" fill="#F58319" />
+                    <circle cx="74.6667" cy="89.3337" r="1.66667" transform="rotate(-90 74.6667 89.3337)" fill="#F58319" />
+                    <circle cx="103" cy="89.3337" r="1.66667" transform="rotate(-90 103 89.3337)" fill="#F58319" />
+                    <circle cx="132" cy="89.3337" r="1.66667" transform="rotate(-90 132 89.3337)" fill="#F58319" />
+                    <circle cx="1.66667" cy="74.667" r="1.66667" transform="rotate(-90 1.66667 74.667)" fill="#F58319" />
+                    <circle cx="1.66667" cy="31.0002" r="1.66667" transform="rotate(-90 1.66667 31.0002)" fill="#F58319" />
+                    <circle cx="16.3333" cy="74.667" r="1.66667" transform="rotate(-90 16.3333 74.667)" fill="#F58319" />
+                    <circle cx="16.3333" cy="31.0002" r="1.66667" transform="rotate(-90 16.3333 31.0002)" fill="#F58319" />
+                    <circle cx="31" cy="74.667" r="1.66667" transform="rotate(-90 31 74.667)" fill="#F58319" />
+                    <circle cx="31" cy="31.0002" r="1.66667" transform="rotate(-90 31 31.0002)" fill="#F58319" />
+                    <circle cx="45.6667" cy="74.667" r="1.66667" transform="rotate(-90 45.6667 74.667)" fill="#F58319" />
+                    <circle cx="45.6667" cy="31.0002" r="1.66667" transform="rotate(-90 45.6667 31.0002)" fill="#F58319" />
+                    <circle cx="60.3333" cy="74.6667" r="1.66667" transform="rotate(-90 60.3333 74.6667)" fill="#F58319" />
+                    <circle cx="60.3333" cy="31" r="1.66667" transform="rotate(-90 60.3333 31)" fill="#F58319" />
+                    <circle cx="88.6667" cy="74.6667" r="1.66667" transform="rotate(-90 88.6667 74.6667)" fill="#F58319" />
+                    <circle cx="88.6667" cy="31" r="1.66667" transform="rotate(-90 88.6667 31)" fill="#F58319" />
+                    <circle cx="117.667" cy="74.6667" r="1.66667" transform="rotate(-90 117.667 74.6667)" fill="#F58319" />
+                    <circle cx="117.667" cy="31" r="1.66667" transform="rotate(-90 117.667 31)" fill="#F58319" />
+                    <circle cx="74.6667" cy="74.6667" r="1.66667" transform="rotate(-90 74.6667 74.6667)" fill="#F58319" />
+                    <circle cx="74.6667" cy="31" r="1.66667" transform="rotate(-90 74.6667 31)" fill="#F58319" />
+                    <circle cx="103" cy="74.6667" r="1.66667" transform="rotate(-90 103 74.6667)" fill="#F58319" />
+                    <circle cx="103" cy="31" r="1.66667" transform="rotate(-90 103 31)" fill="#F58319" />
+                    <circle cx="132" cy="74.6667" r="1.66667" transform="rotate(-90 132 74.6667)" fill="#F58319" />
+                    <circle cx="132" cy="31" r="1.66667" transform="rotate(-90 132 31)" fill="#F58319" />
+                    <circle cx="1.66667" cy="60.0002" r="1.66667" transform="rotate(-90 1.66667 60.0002)" fill="#F58319" />
+                    <circle cx="1.66667" cy="16.3335" r="1.66667" transform="rotate(-90 1.66667 16.3335)" fill="#F58319" />
+                    <circle cx="16.3333" cy="60.0002" r="1.66667" transform="rotate(-90 16.3333 60.0002)" fill="#F58319" />
+                    <circle cx="16.3333" cy="16.3335" r="1.66667" transform="rotate(-90 16.3333 16.3335)" fill="#F58319" />
+                    <circle cx="31" cy="60.0002" r="1.66667" transform="rotate(-90 31 60.0002)" fill="#F58319" />
+                    <circle cx="31" cy="16.3335" r="1.66667" transform="rotate(-90 31 16.3335)" fill="#F58319" />
+                    <circle cx="45.6667" cy="60.0002" r="1.66667" transform="rotate(-90 45.6667 60.0002)" fill="#F58319" />
+                    <circle cx="45.6667" cy="16.3335" r="1.66667" transform="rotate(-90 45.6667 16.3335)" fill="#F58319" />
+                    <circle cx="60.3333" cy="60.0002" r="1.66667" transform="rotate(-90 60.3333 60.0002)" fill="#F58319" />
+                    <circle cx="60.3333" cy="16.3335" r="1.66667" transform="rotate(-90 60.3333 16.3335)" fill="#F58319" />
+                    <circle cx="88.6667" cy="60.0002" r="1.66667" transform="rotate(-90 88.6667 60.0002)" fill="#F58319" />
+                    <circle cx="88.6667" cy="16.3335" r="1.66667" transform="rotate(-90 88.6667 16.3335)" fill="#F58319" />
+                    <circle cx="117.667" cy="60.0002" r="1.66667" transform="rotate(-90 117.667 60.0002)" fill="#F58319" />
+                    <circle cx="117.667" cy="16.3335" r="1.66667" transform="rotate(-90 117.667 16.3335)" fill="#F58319" />
+                    <circle cx="74.6667" cy="60.0002" r="1.66667" transform="rotate(-90 74.6667 60.0002)" fill="#F58319" />
+                    <circle cx="74.6667" cy="16.3335" r="1.66667" transform="rotate(-90 74.6667 16.3335)" fill="#F58319" />
+                    <circle cx="103" cy="60.0002" r="1.66667" transform="rotate(-90 103 60.0002)" fill="#F58319" />
+                    <circle cx="103" cy="16.3335" r="1.66667" transform="rotate(-90 103 16.3335)" fill="#F58319" />
+                    <circle cx="132" cy="60.0002" r="1.66667" transform="rotate(-90 132 60.0002)" fill="#F58319" />
+                    <circle cx="132" cy="16.3335" r="1.66667" transform="rotate(-90 132 16.3335)" fill="#F58319" />
+                    <circle cx="1.66667" cy="45.3335" r="1.66667" transform="rotate(-90 1.66667 45.3335)" fill="#F58319" />
+                    <circle cx="1.66667" cy="1.66671" r="1.66667" transform="rotate(-90 1.66667 1.66671)" fill="#F58319" />
+                    <circle cx="16.3333" cy="45.3335" r="1.66667" transform="rotate(-90 16.3333 45.3335)" fill="#F58319" />
+                    <circle cx="16.3333" cy="1.66671" r="1.66667" transform="rotate(-90 16.3333 1.66671)" fill="#F58319" />
+                    <circle cx="31" cy="45.3335" r="1.66667" transform="rotate(-90 31 45.3335)" fill="#F58319" />
+                    <circle cx="31" cy="1.66671" r="1.66667" transform="rotate(-90 31 1.66671)" fill="#F58319" />
+                    <circle cx="45.6667" cy="45.3335" r="1.66667" transform="rotate(-90 45.6667 45.3335)" fill="#F58319" />
+                    <circle cx="45.6667" cy="1.66671" r="1.66667" transform="rotate(-90 45.6667 1.66671)" fill="#F58319" />
+                    <circle cx="60.3333" cy="45.3337" r="1.66667" transform="rotate(-90 60.3333 45.3337)" fill="#F58319" />
+                    <circle cx="60.3333" cy="1.66695" r="1.66667" transform="rotate(-90 60.3333 1.66695)" fill="#F58319" />
+                    <circle cx="88.6667" cy="45.3337" r="1.66667" transform="rotate(-90 88.6667 45.3337)" fill="#F58319" />
+                    <circle cx="88.6667" cy="1.66695" r="1.66667" transform="rotate(-90 88.6667 1.66695)" fill="#F58319" />
+                    <circle cx="117.667" cy="45.3337" r="1.66667" transform="rotate(-90 117.667 45.3337)" fill="#F58319" />
+                    <circle cx="117.667" cy="1.66695" r="1.66667" transform="rotate(-90 117.667 1.66695)" fill="#F58319" />
+                    <circle cx="74.6667" cy="45.3337" r="1.66667" transform="rotate(-90 74.6667 45.3337)" fill="#F58319" />
+                    <circle cx="74.6667" cy="1.66695" r="1.66667" transform="rotate(-90 74.6667 1.66695)" fill="#F58319" />
+                    <circle cx="103" cy="45.3337" r="1.66667" transform="rotate(-90 103 45.3337)" fill="#F58319" />
+                    <circle cx="103" cy="1.66695" r="1.66667" transform="rotate(-90 103 1.66695)" fill="#F58319" />
+                    <circle cx="132" cy="45.3337" r="1.66667" transform="rotate(-90 132 45.3337)" fill="#F58319" />
+                    <circle cx="132" cy="1.66695" r="1.66667" transform="rotate(-90 132 1.66695)" fill="#F58319" />
+                  </svg>
+                </span>
+                <span class="absolute -left-6 -bottom-6 z-[-1]">
+                  <svg width="134" height="106" viewBox="0 0 134 106" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="1.66667" cy="104" r="1.66667" transform="rotate(-90 1.66667 104)" fill="#F58319" />
+                    <circle cx="16.3333" cy="104" r="1.66667" transform="rotate(-90 16.3333 104)" fill="#F58319" />
+                    <circle cx="31" cy="104" r="1.66667" transform="rotate(-90 31 104)" fill="#F58319" />
+                    <circle cx="45.6667" cy="104" r="1.66667" transform="rotate(-90 45.6667 104)" fill="#F58319" />
+                    <circle cx="60.3333" cy="104" r="1.66667" transform="rotate(-90 60.3333 104)" fill="#F58319" />
+                    <circle cx="88.6667" cy="104" r="1.66667" transform="rotate(-90 88.6667 104)" fill="#F58319" />
+                    <circle cx="117.667" cy="104" r="1.66667" transform="rotate(-90 117.667 104)" fill="#F58319" />
+                    <circle cx="74.6667" cy="104" r="1.66667" transform="rotate(-90 74.6667 104)" fill="#F58319" />
+                    <circle cx="103" cy="104" r="1.66667" transform="rotate(-90 103 104)" fill="#F58319" />
+                    <circle cx="132" cy="104" r="1.66667" transform="rotate(-90 132 104)" fill="#F58319" />
+                    <circle cx="1.66667" cy="89.3335" r="1.66667" transform="rotate(-90 1.66667 89.3335)" fill="#F58319" />
+                    <circle cx="16.3333" cy="89.3335" r="1.66667" transform="rotate(-90 16.3333 89.3335)" fill="#F58319" />
+                    <circle cx="31" cy="89.3335" r="1.66667" transform="rotate(-90 31 89.3335)" fill="#F58319" />
+                    <circle cx="45.6667" cy="89.3335" r="1.66667" transform="rotate(-90 45.6667 89.3335)" fill="#F58319" />
+                    <circle cx="60.3333" cy="89.3337" r="1.66667" transform="rotate(-90 60.3333 89.3337)" fill="#F58319" />
+                    <circle cx="88.6667" cy="89.3337" r="1.66667" transform="rotate(-90 88.6667 89.3337)" fill="#F58319" />
+                    <circle cx="117.667" cy="89.3337" r="1.66667" transform="rotate(-90 117.667 89.3337)" fill="#F58319" />
+                    <circle cx="74.6667" cy="89.3337" r="1.66667" transform="rotate(-90 74.6667 89.3337)" fill="#F58319" />
+                    <circle cx="103" cy="89.3337" r="1.66667" transform="rotate(-90 103 89.3337)" fill="#F58319" />
+                    <circle cx="132" cy="89.3337" r="1.66667" transform="rotate(-90 132 89.3337)" fill="#F58319" />
+                    <circle cx="1.66667" cy="74.667" r="1.66667" transform="rotate(-90 1.66667 74.667)" fill="#F58319" />
+                    <circle cx="1.66667" cy="31.0002" r="1.66667" transform="rotate(-90 1.66667 31.0002)" fill="#F58319" />
+                    <circle cx="16.3333" cy="74.667" r="1.66667" transform="rotate(-90 16.3333 74.667)" fill="#F58319" />
+                    <circle cx="16.3333" cy="31.0002" r="1.66667" transform="rotate(-90 16.3333 31.0002)" fill="#F58319" />
+                    <circle cx="31" cy="74.667" r="1.66667" transform="rotate(-90 31 74.667)" fill="#F58319" />
+                    <circle cx="31" cy="31.0002" r="1.66667" transform="rotate(-90 31 31.0002)" fill="#F58319" />
+                    <circle cx="45.6667" cy="74.667" r="1.66667" transform="rotate(-90 45.6667 74.667)" fill="#F58319" />
+                    <circle cx="45.6667" cy="31.0002" r="1.66667" transform="rotate(-90 45.6667 31.0002)" fill="#F58319" />
+                    <circle cx="60.3333" cy="74.6667" r="1.66667" transform="rotate(-90 60.3333 74.6667)" fill="#F58319" />
+                    <circle cx="60.3333" cy="31" r="1.66667" transform="rotate(-90 60.3333 31)" fill="#F58319" />
+                    <circle cx="88.6667" cy="74.6667" r="1.66667" transform="rotate(-90 88.6667 74.6667)" fill="#F58319" />
+                    <circle cx="88.6667" cy="31" r="1.66667" transform="rotate(-90 88.6667 31)" fill="#F58319" />
+                    <circle cx="117.667" cy="74.6667" r="1.66667" transform="rotate(-90 117.667 74.6667)" fill="#F58319" />
+                    <circle cx="117.667" cy="31" r="1.66667" transform="rotate(-90 117.667 31)" fill="#F58319" />
+                    <circle cx="74.6667" cy="74.6667" r="1.66667" transform="rotate(-90 74.6667 74.6667)" fill="#F58319" />
+                    <circle cx="74.6667" cy="31" r="1.66667" transform="rotate(-90 74.6667 31)" fill="#F58319" />
+                    <circle cx="103" cy="74.6667" r="1.66667" transform="rotate(-90 103 74.6667)" fill="#F58319" />
+                    <circle cx="103" cy="31" r="1.66667" transform="rotate(-90 103 31)" fill="#F58319" />
+                    <circle cx="132" cy="74.6667" r="1.66667" transform="rotate(-90 132 74.6667)" fill="#F58319" />
+                    <circle cx="132" cy="31" r="1.66667" transform="rotate(-90 132 31)" fill="#F58319" />
+                    <circle cx="1.66667" cy="60.0002" r="1.66667" transform="rotate(-90 1.66667 60.0002)" fill="#F58319" />
+                    <circle cx="1.66667" cy="16.3335" r="1.66667" transform="rotate(-90 1.66667 16.3335)" fill="#F58319" />
+                    <circle cx="16.3333" cy="60.0002" r="1.66667" transform="rotate(-90 16.3333 60.0002)" fill="#F58319" />
+                    <circle cx="16.3333" cy="16.3335" r="1.66667" transform="rotate(-90 16.3333 16.3335)" fill="#F58319" />
+                    <circle cx="31" cy="60.0002" r="1.66667" transform="rotate(-90 31 60.0002)" fill="#F58319" />
+                    <circle cx="31" cy="16.3335" r="1.66667" transform="rotate(-90 31 16.3335)" fill="#F58319" />
+                    <circle cx="45.6667" cy="60.0002" r="1.66667" transform="rotate(-90 45.6667 60.0002)" fill="#F58319" />
+                    <circle cx="45.6667" cy="16.3335" r="1.66667" transform="rotate(-90 45.6667 16.3335)" fill="#F58319" />
+                    <circle cx="60.3333" cy="60.0002" r="1.66667" transform="rotate(-90 60.3333 60.0002)" fill="#F58319" />
+                    <circle cx="60.3333" cy="16.3335" r="1.66667" transform="rotate(-90 60.3333 16.3335)" fill="#F58319" />
+                    <circle cx="88.6667" cy="60.0002" r="1.66667" transform="rotate(-90 88.6667 60.0002)" fill="#F58319" />
+                    <circle cx="88.6667" cy="16.3335" r="1.66667" transform="rotate(-90 88.6667 16.3335)" fill="#F58319" />
+                    <circle cx="117.667" cy="60.0002" r="1.66667" transform="rotate(-90 117.667 60.0002)" fill="#F58319" />
+                    <circle cx="117.667" cy="16.3335" r="1.66667" transform="rotate(-90 117.667 16.3335)" fill="#F58319" />
+                    <circle cx="74.6667" cy="60.0002" r="1.66667" transform="rotate(-90 74.6667 60.0002)" fill="#F58319" />
+                    <circle cx="74.6667" cy="16.3335" r="1.66667" transform="rotate(-90 74.6667 16.3335)" fill="#F58319" />
+                    <circle cx="103" cy="60.0002" r="1.66667" transform="rotate(-90 103 60.0002)" fill="#F58319" />
+                    <circle cx="103" cy="16.3335" r="1.66667" transform="rotate(-90 103 16.3335)" fill="#F58319" />
+                    <circle cx="132" cy="60.0002" r="1.66667" transform="rotate(-90 132 60.0002)" fill="#F58319" />
+                    <circle cx="132" cy="16.3335" r="1.66667" transform="rotate(-90 132 16.3335)" fill="#F58319" />
+                    <circle cx="1.66667" cy="45.3335" r="1.66667" transform="rotate(-90 1.66667 45.3335)" fill="#F58319" />
+                    <circle cx="1.66667" cy="1.66671" r="1.66667" transform="rotate(-90 1.66667 1.66671)" fill="#F58319" />
+                    <circle cx="16.3333" cy="45.3335" r="1.66667" transform="rotate(-90 16.3333 45.3335)" fill="#F58319" />
+                    <circle cx="16.3333" cy="1.66671" r="1.66667" transform="rotate(-90 16.3333 1.66671)" fill="#F58319" />
+                    <circle cx="31" cy="45.3335" r="1.66667" transform="rotate(-90 31 45.3335)" fill="#F58319" />
+                    <circle cx="31" cy="1.66671" r="1.66667" transform="rotate(-90 31 1.66671)" fill="#F58319" />
+                    <circle cx="45.6667" cy="45.3335" r="1.66667" transform="rotate(-90 45.6667 45.3335)" fill="#F58319" />
+                    <circle cx="45.6667" cy="1.66671" r="1.66667" transform="rotate(-90 45.6667 1.66671)" fill="#F58319" />
+                    <circle cx="60.3333" cy="45.3337" r="1.66667" transform="rotate(-90 60.3333 45.3337)" fill="#F58319" />
+                    <circle cx="60.3333" cy="1.66695" r="1.66667" transform="rotate(-90 60.3333 1.66695)" fill="#F58319" />
+                    <circle cx="88.6667" cy="45.3337" r="1.66667" transform="rotate(-90 88.6667 45.3337)" fill="#F58319" />
+                    <circle cx="88.6667" cy="1.66695" r="1.66667" transform="rotate(-90 88.6667 1.66695)" fill="#F58319" />
+                    <circle cx="117.667" cy="45.3337" r="1.66667" transform="rotate(-90 117.667 45.3337)" fill="#F58319" />
+                    <circle cx="117.667" cy="1.66695" r="1.66667" transform="rotate(-90 117.667 1.66695)" fill="#F58319" />
+                    <circle cx="74.6667" cy="45.3337" r="1.66667" transform="rotate(-90 74.6667 45.3337)" fill="#F58319" />
+                    <circle cx="74.6667" cy="1.66695" r="1.66667" transform="rotate(-90 74.6667 1.66695)" fill="#F58319" />
+                    <circle cx="103" cy="45.3337" r="1.66667" transform="rotate(-90 103 45.3337)" fill="#F58319" />
+                    <circle cx="103" cy="1.66695" r="1.66667" transform="rotate(-90 103 1.66695)" fill="#F58319" />
+                    <circle cx="132" cy="45.3337" r="1.66667" transform="rotate(-90 132 45.3337)" fill="#F58319" />
+                    <circle cx="132" cy="1.66695" r="1.66667" transform="rotate(-90 132 1.66695)" fill="#F58319" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        x-show="videoOpen"
+        x-transition
+        class="fixed top-0 left-0 z-50 flex h-screen w-full items-center justify-center bg-black bg-opacity-70"
+      >
+        <div @click.outside="videoOpen = false" class="mx-auto w-full max-w-[550px] bg-white">
+          <video class="intro-video" playsinline="" controls="" preload="">
+            <source src="./src/assets/video/video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <button
+          @click="videoOpen = false"
+          class="text-body-color absolute top-0 right-0 flex h-20 w-20 cursor-pointer items-center justify-center hover:bg-black"
+        >
+          <svg viewBox="0 0 16 15" class="h-8 w-8 fill-current">
+            <path
+              d="M3.37258 1.27L8.23258 6.13L13.0726 1.29C13.1574 1.19972 13.2596 1.12749 13.373 1.07766C13.4864 1.02783 13.6087 1.00141 13.7326 1C13.9978 1 14.2522 1.10536 14.4397 1.29289C14.6272 1.48043 14.7326 1.73478 14.7326 2C14.7349 2.1226 14.7122 2.24439 14.6657 2.35788C14.6193 2.47138 14.5502 2.57419 14.4626 2.66L9.57258 7.5L14.4626 12.39C14.6274 12.5512 14.724 12.7696 14.7326 13C14.7326 13.2652 14.6272 13.5196 14.4397 13.7071C14.2522 13.8946 13.9978 14 13.7326 14C13.6051 14.0053 13.478 13.984 13.3592 13.9375C13.2404 13.8911 13.1326 13.8204 13.0426 13.73L8.23258 8.87L3.38258 13.72C3.29809 13.8073 3.19715 13.8769 3.08559 13.925C2.97402 13.9731 2.85405 13.9986 2.73258 14C2.46737 14 2.21301 13.8946 2.02548 13.7071C1.83794 13.5196 1.73258 13.2652 1.73258 13C1.73025 12.8774 1.753 12.7556 1.79943 12.6421C1.84586 12.5286 1.91499 12.4258 2.00258 12.34L6.89258 7.5L2.00258 2.61C1.83777 2.44876 1.74112 2.23041 1.73258 2C1.73258 1.73478 1.83794 1.48043 2.02548 1.29289C2.21301 1.10536 2.46737 1 2.73258 1C2.97258 1.003 3.20258 1.1 3.37258 1.27Z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- ====== Hero Section End -->
+    <!-- ====== Join Us Section End -->
+    <section class="bg-white py-[70px]">
+      <div class="mx-auto px-4 sm:container">
+        <div class="border-primary border-l-[6px] pl-5">
+          <h2 class="text-black mb-10 text-3xl font-bold sm:text-4xl md:text-[40px]">Willkommen zu HandelsTrader</h2>
+
+          <p class="font-semibol text-base leading-relaxed text-dark md:text-lg md:leading-relaxed">
+            Tritt uns bei und beginne mit dem HandelsTrader ernstes Geld zu verdienen! Tausende von Anlegern aus der ganzen Welt nutzen
+            bereits den HandelsTrader zu ihrem Vorteil. Der HandelsTrader ist eine exklusive Chance für Krypto-Adopter, die ein passives
+            Einkommen durch Arbeiten an ihrem Computer erzielen können, mit durchschnittlich mehr als
+            <span class="font-bold text-black">900 £ pro Tag</span>
+            .
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Join Us Section Start -->
+    <!-- ====== Services Section Start -->
+    <section class="pb-12 lg:pb-[90px] pt-0">
+      <div class="container mx-auto">
+        <div class="-mx-4 flex flex-wrap">
+          <div class="w-full px-4">
+            <div class="text-left mb-8 max-w-[510px] lg:mb-12">
+              <span class="text-primary mb-2 block text-lg font-semibold">Unsere Leistungen</span>
+              <h2 class="text-black mb-4 text-3xl font-bold sm:text-4xl md:text-[40px]">Was wir anbieten</h2>
+            </div>
+          </div>
+        </div>
+        <div class="-mx-4 flex flex-wrap">
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+            <div class="mb-8 rounded-sm bg-white p-10 shadow-md hover:shadow-lg md:px-7 xl:px-10">
+              <div class="bg-primary mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-sm">
+                <svg width="32" height="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="target" class="icon glyph">
+                  <path
+                    d="M22,12A10,10,0,1,1,12,2a1,1,0,0,1,0,2,8,8,0,1,0,8,8,1,1,0,0,1,2,0ZM12,9a1,1,0,0,0,0-2,5,5,0,1,0,5,5,1,1,0,0,0-2,0,3,3,0,1,1-3-3Zm-.71,3.71a1,1,0,0,0,1.42,0L16.41,9H19a1,1,0,0,0,.71-.29l2-2A1,1,0,0,0,22,5.84a1,1,0,0,0-.54-.73l-1.7-.86-.86-1.7A1,1,0,0,0,18.16,2a1,1,0,0,0-.87.28l-2,2A1,1,0,0,0,15,5V7.59l-3.71,3.7A1,1,0,0,0,11.29,12.71Z"
+                    style="fill: #fff"
+                  ></path>
+                </svg>
+              </div>
+              <h4 class="text-dark mb-3 text-xl font-semibold">Scharf wie Laser</h4>
+              <p class="text-body-color">
+                Es gibt keine andere Handels-App auf der Welt, die eine beeindruckende Erfolgsrate von 89,4% erreicht, wie es der
+                HandelsTrader kann. Unsere Mitglieder aus der ganzen Welt vertrauen uns, um ihr hart verdientes Geld zu verdoppeln, zu
+                verdreifachen oder sogar zu vervierfachen.
+              </p>
+            </div>
+          </div>
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+            <div class="mb-8 rounded-sm bg-white p-10 shadow-md hover:shadow-lg md:px-7 xl:px-10">
+              <div class="bg-primary mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" viewBox="0 0 512 512">
+                  <path
+                    d="M176 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64c-35.3 0-64 28.7-64 64H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64c0 35.3 28.7 64 64 64v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448c35.3 0 64-28.7 64-64h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V280h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V176h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448c0-35.3-28.7-64-64-64V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H280V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H176V24zM160 128H352c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H160c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32zm192 32H160V352H352V160z"
+                  ></path>
+                </svg>
+              </div>
+              <h4 class="text-dark mb-3 text-xl font-semibold">Neueste Technologie</h4>
+              <p class="text-body-color">
+                Die HandelsTrader-Software wurde von den besten Profis der Handelswelt geschmiedet. Die Software minimiert Verzögerungen und
+                wenn Sie etwas über den Handel wissen, wissen Sie, dass dies ein riesiger Vorteil ist. Dieser "Zeitsprung" macht die
+                Software zur konsistentesten Handels-App.
+              </p>
+            </div>
+          </div>
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+            <div class="mb-8 rounded-sm bg-white p-10 shadow-md hover:shadow-lg md:px-7 xl:px-10">
+              <div class="bg-primary mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" viewBox="0 0 576 512">
+                  <path
+                    d="M400 0H176c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8H24C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.3 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9H192c-17.7 0-32 14.3-32 32s14.3 32 32 32H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H357.9C337 448 320 431 320 410.1c0-19.6 15.9-39.2 39.4-45.6c39.9-11 93.9-32.7 138.2-75.8C542.5 245 576 180.6 576 88c0-13.3-10.7-24-24-24H446.4c.3-5.2 .5-10.4 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112h84.4c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6h84.4c-5.1 66.3-31.1 111.2-63 142.3z"
+                  ></path>
+                </svg>
+              </div>
+              <h4 class="text-dark mb-3 text-xl font-semibold">Weltklasse Handelsapp</h4>
+              <p class="text-body-color">
+                Der HandelsTrader hat eine Reihe von Auszeichnungen gewonnen. Die jüngste Auszeichnung, die wir die Ehre hatten zu erhalten,
+                ist die Platzierung an der Spitze der Kategorie Handelssoftware der UK Trading Association. Wir sind zuversichtlich, dass
+                wir Ihnen die beste Erfahrung bieten.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Services Section End -->
+    <!-- ======  Steps Start  -->
+    <section class="overflow-hidden pb-20 lg:pb-[120px] pt-0">
+      <div class="mx-auto container">
+        <div class="-mx-4 flex flex-wrap">
+          <div class="w-full px-4">
+            <div class="text-left mb-8 max-w-[510px] lg:mb-12">
+              <span class="text-primary mb-2 block text-lg font-semibold">Anweisungen</span>
+              <h2 class="text-black mb-4 text-3xl font-bold sm:text-4xl md:text-[40px]">Folge diesen Schrittenr</h2>
+            </div>
+          </div>
+        </div>
+        <div class="-mx-4 flex flex-wrap">
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+            <div class="border-primary mb-8 border-b-[3px]">
+              <span class="border-stroke mb-[18px] inline-block border py-1 px-4 text-sm font-medium text-black">Schritt 1</span>
+              <h3 class="mb-[10px] text-xl font-medium text-black">Benutzerkonto erstellen</h3>
+              <p class="text-body-color mb-5 text-base">
+                Füllen Sie das Anmeldeformular aus Sobald Ihre Registrierung akzeptiert wird, werden Sie automatisch der neueste Mitglied
+                der HandelsTrader Community.
+              </p>
+            </div>
+          </div>
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+            <div class="border-stroke mb-8 border-b-[3px]">
+              <span class="border-stroke mb-[18px] inline-block border py-1 px-4 text-sm font-medium text-black">Schritt 2</span>
+              <h3 class="mb-[10px] text-xl font-medium text-black">Konten aufladen</h3>
+              <p class="text-body-color mb-5 text-base">
+                Konten aufladen Wie bei jeder Investition oder jedem Unternehmen benötigen Sie eine Anfangsinvestition. HandelsTrader
+                ermöglicht Ihnen den Start mit so wenig wie 250 £.
+              </p>
+            </div>
+          </div>
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+            <div class="border-stroke mb-8 border-b-[3px]">
+              <span class="border-stroke mb-[18px] inline-block border py-1 px-4 text-sm font-medium text-black">Schritt 3</span>
+              <h3 class="mb-[10px] text-xl font-medium text-black">Beginnen Sie mit dem Profitieren</h3>
+              <p class="text-body-color mb-5 text-base">
+                Verdienen Sie Geld! Klicken Sie auf "Trade", um unseren automatisierten Algorithmus zu verwenden. Sie können auch manuell
+                handeln, wenn Sie dies bevorzugen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======  Steps End  -->
+    <!-- ====== Testimonials Section Start -->
+    <section class="pt-0 pb-10 lg:pb-20">
+      <div class="container mx-auto">
+        <div class="-mx-4 flex flex-wrap justify-center">
+          <div class="w-full px-4">
+            <div class="mb-[60px] max-w-[510px]">
+              <span class="text-primary mb-2 block text-lg font-semibold">Testimonials</span>
+              <h2 class="text-dark mb-4 text-3xl font-bold sm:text-4xl md:text-[40px]">What our Clients Says</h2>
+              <p class="text-body-color text-base">
+                There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="-mx-4 flex flex-wrap justify-center">
+          <div class="w-full px-4 md:w-1/2">
+            <div class="shadow-testimonial-5 relative mb-10 overflow-hidden rounded-lg bg-white p-8 sm:p-10 md:py-10 md:px-6 lg:p-10">
+              <div class="mb-8 flex items-center">
+                <div class="mr-5 h-20 w-full max-w-[80px] overflow-hidden rounded md:h-[60px] md:max-w-[60px] lg:h-20 lg:max-w-[80px]">
+                  <img src="src/assets/img/client-1.png" alt="image" class="w-full" />
+                </div>
+                <div class="w-full">
+                  <h5 class="text-dark mb-1 text-lg font-semibold">Elliot B.</h5>
+                  <p class="text-body-color text-xs">London</p>
+                </div>
+              </div>
+              <p class="text-body-color text-base leading-relaxed">
+                “Ich bin erst seit 17 Tagen Mitglied bei HandelsTrader. Aber mein Leben hat sich bereits verändert! Ich habe nicht nur meine
+                ersten 100.000 € gemacht, sondern auch einige der unglaublichsten Menschen kennengelernt. Danke, HandelsTrader!”
+              </p>
+              <div>
+                <span class="absolute right-0 top-0">
+                  <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="1.66667" cy="104" r="1.66667" transform="rotate(-90 1.66667 104)" fill="#F58319" />
+                    <circle cx="16.3333" cy="104" r="1.66667" transform="rotate(-90 16.3333 104)" fill="#F58319" />
+                    <circle cx="31" cy="104" r="1.66667" transform="rotate(-90 31 104)" fill="#F58319" />
+                    <circle cx="45.6667" cy="104" r="1.66667" transform="rotate(-90 45.6667 104)" fill="#F58319" />
+                    <circle cx="60.3333" cy="104" r="1.66667" transform="rotate(-90 60.3333 104)" fill="#F58319" />
+                    <circle cx="88.6667" cy="104" r="1.66667" transform="rotate(-90 88.6667 104)" fill="#F58319" />
+                    <circle cx="117.667" cy="104" r="1.66667" transform="rotate(-90 117.667 104)" fill="#F58319" />
+                    <circle cx="74.6667" cy="104" r="1.66667" transform="rotate(-90 74.6667 104)" fill="#F58319" />
+                    <circle cx="103" cy="104" r="1.66667" transform="rotate(-90 103 104)" fill="#F58319" />
+                    <circle cx="132" cy="104" r="1.66667" transform="rotate(-90 132 104)" fill="#F58319" />
+                    <circle cx="1.66667" cy="89.3335" r="1.66667" transform="rotate(-90 1.66667 89.3335)" fill="#F58319" />
+                    <circle cx="16.3333" cy="89.3335" r="1.66667" transform="rotate(-90 16.3333 89.3335)" fill="#F58319" />
+                    <circle cx="31" cy="89.3335" r="1.66667" transform="rotate(-90 31 89.3335)" fill="#F58319" />
+                    <circle cx="45.6667" cy="89.3335" r="1.66667" transform="rotate(-90 45.6667 89.3335)" fill="#F58319" />
+                    <circle cx="60.3333" cy="89.3337" r="1.66667" transform="rotate(-90 60.3333 89.3337)" fill="#F58319" />
+                    <circle cx="88.6667" cy="89.3337" r="1.66667" transform="rotate(-90 88.6667 89.3337)" fill="#F58319" />
+                    <circle cx="117.667" cy="89.3337" r="1.66667" transform="rotate(-90 117.667 89.3337)" fill="#F58319" />
+                    <circle cx="74.6667" cy="89.3337" r="1.66667" transform="rotate(-90 74.6667 89.3337)" fill="#F58319" />
+                    <circle cx="103" cy="89.3337" r="1.66667" transform="rotate(-90 103 89.3337)" fill="#F58319" />
+                    <circle cx="132" cy="89.3337" r="1.66667" transform="rotate(-90 132 89.3337)" fill="#F58319" />
+                    <circle cx="1.66667" cy="74.667" r="1.66667" transform="rotate(-90 1.66667 74.667)" fill="#F58319" />
+                    <circle cx="1.66667" cy="31.0002" r="1.66667" transform="rotate(-90 1.66667 31.0002)" fill="#F58319" />
+                    <circle cx="16.3333" cy="74.667" r="1.66667" transform="rotate(-90 16.3333 74.667)" fill="#F58319" />
+                    <circle cx="16.3333" cy="31.0002" r="1.66667" transform="rotate(-90 16.3333 31.0002)" fill="#F58319" />
+                    <circle cx="31" cy="74.667" r="1.66667" transform="rotate(-90 31 74.667)" fill="#F58319" />
+                    <circle cx="31" cy="31.0002" r="1.66667" transform="rotate(-90 31 31.0002)" fill="#F58319" />
+                    <circle cx="45.6667" cy="74.667" r="1.66667" transform="rotate(-90 45.6667 74.667)" fill="#F58319" />
+                    <circle cx="45.6667" cy="31.0002" r="1.66667" transform="rotate(-90 45.6667 31.0002)" fill="#F58319" />
+                    <circle cx="60.3333" cy="74.6667" r="1.66667" transform="rotate(-90 60.3333 74.6667)" fill="#F58319" />
+                    <circle cx="60.3333" cy="31" r="1.66667" transform="rotate(-90 60.3333 31)" fill="#F58319" />
+                    <circle cx="88.6667" cy="74.6667" r="1.66667" transform="rotate(-90 88.6667 74.6667)" fill="#F58319" />
+                    <circle cx="88.6667" cy="31" r="1.66667" transform="rotate(-90 88.6667 31)" fill="#F58319" />
+                    <circle cx="117.667" cy="74.6667" r="1.66667" transform="rotate(-90 117.667 74.6667)" fill="#F58319" />
+                    <circle cx="117.667" cy="31" r="1.66667" transform="rotate(-90 117.667 31)" fill="#F58319" />
+                    <circle cx="74.6667" cy="74.6667" r="1.66667" transform="rotate(-90 74.6667 74.6667)" fill="#F58319" />
+                    <circle cx="74.6667" cy="31" r="1.66667" transform="rotate(-90 74.6667 31)" fill="#F58319" />
+                    <circle cx="103" cy="74.6667" r="1.66667" transform="rotate(-90 103 74.6667)" fill="#F58319" />
+                    <circle cx="103" cy="31" r="1.66667" transform="rotate(-90 103 31)" fill="#F58319" />
+                    <circle cx="132" cy="74.6667" r="1.66667" transform="rotate(-90 132 74.6667)" fill="#F58319" />
+                    <circle cx="132" cy="31" r="1.66667" transform="rotate(-90 132 31)" fill="#F58319" />
+                    <circle cx="1.66667" cy="60.0002" r="1.66667" transform="rotate(-90 1.66667 60.0002)" fill="#F58319" />
+                    <circle cx="1.66667" cy="16.3335" r="1.66667" transform="rotate(-90 1.66667 16.3335)" fill="#F58319" />
+                    <circle cx="16.3333" cy="60.0002" r="1.66667" transform="rotate(-90 16.3333 60.0002)" fill="#F58319" />
+                    <circle cx="16.3333" cy="16.3335" r="1.66667" transform="rotate(-90 16.3333 16.3335)" fill="#F58319" />
+                    <circle cx="31" cy="60.0002" r="1.66667" transform="rotate(-90 31 60.0002)" fill="#F58319" />
+                    <circle cx="31" cy="16.3335" r="1.66667" transform="rotate(-90 31 16.3335)" fill="#F58319" />
+                    <circle cx="45.6667" cy="60.0002" r="1.66667" transform="rotate(-90 45.6667 60.0002)" fill="#F58319" />
+                    <circle cx="45.6667" cy="16.3335" r="1.66667" transform="rotate(-90 45.6667 16.3335)" fill="#F58319" />
+                    <circle cx="60.3333" cy="60.0002" r="1.66667" transform="rotate(-90 60.3333 60.0002)" fill="#F58319" />
+                    <circle cx="60.3333" cy="16.3335" r="1.66667" transform="rotate(-90 60.3333 16.3335)" fill="#F58319" />
+                    <circle cx="88.6667" cy="60.0002" r="1.66667" transform="rotate(-90 88.6667 60.0002)" fill="#F58319" />
+                    <circle cx="88.6667" cy="16.3335" r="1.66667" transform="rotate(-90 88.6667 16.3335)" fill="#F58319" />
+                    <circle cx="117.667" cy="60.0002" r="1.66667" transform="rotate(-90 117.667 60.0002)" fill="#F58319" />
+                    <circle cx="117.667" cy="16.3335" r="1.66667" transform="rotate(-90 117.667 16.3335)" fill="#F58319" />
+                    <circle cx="74.6667" cy="60.0002" r="1.66667" transform="rotate(-90 74.6667 60.0002)" fill="#F58319" />
+                    <circle cx="74.6667" cy="16.3335" r="1.66667" transform="rotate(-90 74.6667 16.3335)" fill="#F58319" />
+                    <circle cx="103" cy="60.0002" r="1.66667" transform="rotate(-90 103 60.0002)" fill="#F58319" />
+                    <circle cx="103" cy="16.3335" r="1.66667" transform="rotate(-90 103 16.3335)" fill="#F58319" />
+                    <circle cx="132" cy="60.0002" r="1.66667" transform="rotate(-90 132 60.0002)" fill="#F58319" />
+                    <circle cx="132" cy="16.3335" r="1.66667" transform="rotate(-90 132 16.3335)" fill="#F58319" />
+                    <circle cx="1.66667" cy="45.3335" r="1.66667" transform="rotate(-90 1.66667 45.3335)" fill="#F58319" />
+                    <circle cx="1.66667" cy="1.66671" r="1.66667" transform="rotate(-90 1.66667 1.66671)" fill="#F58319" />
+                    <circle cx="16.3333" cy="45.3335" r="1.66667" transform="rotate(-90 16.3333 45.3335)" fill="#F58319" />
+                    <circle cx="16.3333" cy="1.66671" r="1.66667" transform="rotate(-90 16.3333 1.66671)" fill="#F58319" />
+                    <circle cx="31" cy="45.3335" r="1.66667" transform="rotate(-90 31 45.3335)" fill="#F58319" />
+                    <circle cx="31" cy="1.66671" r="1.66667" transform="rotate(-90 31 1.66671)" fill="#F58319" />
+                    <circle cx="45.6667" cy="45.3335" r="1.66667" transform="rotate(-90 45.6667 45.3335)" fill="#F58319" />
+                    <circle cx="45.6667" cy="1.66671" r="1.66667" transform="rotate(-90 45.6667 1.66671)" fill="#F58319" />
+                    <circle cx="60.3333" cy="45.3337" r="1.66667" transform="rotate(-90 60.3333 45.3337)" fill="#F58319" />
+                    <circle cx="60.3333" cy="1.66695" r="1.66667" transform="rotate(-90 60.3333 1.66695)" fill="#F58319" />
+                    <circle cx="88.6667" cy="45.3337" r="1.66667" transform="rotate(-90 88.6667 45.3337)" fill="#F58319" />
+                    <circle cx="88.6667" cy="1.66695" r="1.66667" transform="rotate(-90 88.6667 1.66695)" fill="#F58319" />
+                    <circle cx="117.667" cy="45.3337" r="1.66667" transform="rotate(-90 117.667 45.3337)" fill="#F58319" />
+                    <circle cx="117.667" cy="1.66695" r="1.66667" transform="rotate(-90 117.667 1.66695)" fill="#F58319" />
+                    <circle cx="74.6667" cy="45.3337" r="1.66667" transform="rotate(-90 74.6667 45.3337)" fill="#F58319" />
+                    <circle cx="74.6667" cy="1.66695" r="1.66667" transform="rotate(-90 74.6667 1.66695)" fill="#F58319" />
+                    <circle cx="103" cy="45.3337" r="1.66667" transform="rotate(-90 103 45.3337)" fill="#F58319" />
+                    <circle cx="103" cy="1.66695" r="1.66667" transform="rotate(-90 103 1.66695)" fill="#F58319" />
+                    <circle cx="132" cy="45.3337" r="1.66667" transform="rotate(-90 132 45.3337)" fill="#F58319" />
+                    <circle cx="132" cy="1.66695" r="1.66667" transform="rotate(-90 132 1.66695)" fill="#F58319" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 md:w-1/2">
+            <div class="shadow-testimonial-5 relative mb-10 overflow-hidden rounded-lg bg-white p-8 sm:p-10 md:py-10 md:px-6 lg:p-10">
+              <div class="mb-8 flex items-center">
+                <div class="mr-5 h-20 w-full max-w-[80px] overflow-hidden rounded md:h-[60px] md:max-w-[60px] lg:h-20 lg:max-w-[80px]">
+                  <img src="src/assets/img/client-2.png" alt="image" class="w-full" />
+                </div>
+                <div class="w-full">
+                  <h5 class="text-dark mb-1 text-lg font-semibold">Laura P.</h5>
+                  <p class="text-body-color text-xs">Wales</p>
+                </div>
+              </div>
+              <p class="text-body-color text-base leading-relaxed">
+                “Ich weiß endlich, wie es ist, den Traum zu leben. Ich fühle mich nicht mehr wie ein Außenseiter, während alle anderen Spaß
+                haben. Der HandelsTrader hat es mir ermöglicht, frühzeitig in den Ruhestand zu gehen und den Lebensstil des 1% zu führen.”
+              </p>
+              <div>
+                <span class="absolute right-0 top-0">
+                  <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="1.66667" cy="104" r="1.66667" transform="rotate(-90 1.66667 104)" fill="#F58319" />
+                    <circle cx="16.3333" cy="104" r="1.66667" transform="rotate(-90 16.3333 104)" fill="#F58319" />
+                    <circle cx="31" cy="104" r="1.66667" transform="rotate(-90 31 104)" fill="#F58319" />
+                    <circle cx="45.6667" cy="104" r="1.66667" transform="rotate(-90 45.6667 104)" fill="#F58319" />
+                    <circle cx="60.3333" cy="104" r="1.66667" transform="rotate(-90 60.3333 104)" fill="#F58319" />
+                    <circle cx="88.6667" cy="104" r="1.66667" transform="rotate(-90 88.6667 104)" fill="#F58319" />
+                    <circle cx="117.667" cy="104" r="1.66667" transform="rotate(-90 117.667 104)" fill="#F58319" />
+                    <circle cx="74.6667" cy="104" r="1.66667" transform="rotate(-90 74.6667 104)" fill="#F58319" />
+                    <circle cx="103" cy="104" r="1.66667" transform="rotate(-90 103 104)" fill="#F58319" />
+                    <circle cx="132" cy="104" r="1.66667" transform="rotate(-90 132 104)" fill="#F58319" />
+                    <circle cx="1.66667" cy="89.3335" r="1.66667" transform="rotate(-90 1.66667 89.3335)" fill="#F58319" />
+                    <circle cx="16.3333" cy="89.3335" r="1.66667" transform="rotate(-90 16.3333 89.3335)" fill="#F58319" />
+                    <circle cx="31" cy="89.3335" r="1.66667" transform="rotate(-90 31 89.3335)" fill="#F58319" />
+                    <circle cx="45.6667" cy="89.3335" r="1.66667" transform="rotate(-90 45.6667 89.3335)" fill="#F58319" />
+                    <circle cx="60.3333" cy="89.3337" r="1.66667" transform="rotate(-90 60.3333 89.3337)" fill="#F58319" />
+                    <circle cx="88.6667" cy="89.3337" r="1.66667" transform="rotate(-90 88.6667 89.3337)" fill="#F58319" />
+                    <circle cx="117.667" cy="89.3337" r="1.66667" transform="rotate(-90 117.667 89.3337)" fill="#F58319" />
+                    <circle cx="74.6667" cy="89.3337" r="1.66667" transform="rotate(-90 74.6667 89.3337)" fill="#F58319" />
+                    <circle cx="103" cy="89.3337" r="1.66667" transform="rotate(-90 103 89.3337)" fill="#F58319" />
+                    <circle cx="132" cy="89.3337" r="1.66667" transform="rotate(-90 132 89.3337)" fill="#F58319" />
+                    <circle cx="1.66667" cy="74.667" r="1.66667" transform="rotate(-90 1.66667 74.667)" fill="#F58319" />
+                    <circle cx="1.66667" cy="31.0002" r="1.66667" transform="rotate(-90 1.66667 31.0002)" fill="#F58319" />
+                    <circle cx="16.3333" cy="74.667" r="1.66667" transform="rotate(-90 16.3333 74.667)" fill="#F58319" />
+                    <circle cx="16.3333" cy="31.0002" r="1.66667" transform="rotate(-90 16.3333 31.0002)" fill="#F58319" />
+                    <circle cx="31" cy="74.667" r="1.66667" transform="rotate(-90 31 74.667)" fill="#F58319" />
+                    <circle cx="31" cy="31.0002" r="1.66667" transform="rotate(-90 31 31.0002)" fill="#F58319" />
+                    <circle cx="45.6667" cy="74.667" r="1.66667" transform="rotate(-90 45.6667 74.667)" fill="#F58319" />
+                    <circle cx="45.6667" cy="31.0002" r="1.66667" transform="rotate(-90 45.6667 31.0002)" fill="#F58319" />
+                    <circle cx="60.3333" cy="74.6667" r="1.66667" transform="rotate(-90 60.3333 74.6667)" fill="#F58319" />
+                    <circle cx="60.3333" cy="31" r="1.66667" transform="rotate(-90 60.3333 31)" fill="#F58319" />
+                    <circle cx="88.6667" cy="74.6667" r="1.66667" transform="rotate(-90 88.6667 74.6667)" fill="#F58319" />
+                    <circle cx="88.6667" cy="31" r="1.66667" transform="rotate(-90 88.6667 31)" fill="#F58319" />
+                    <circle cx="117.667" cy="74.6667" r="1.66667" transform="rotate(-90 117.667 74.6667)" fill="#F58319" />
+                    <circle cx="117.667" cy="31" r="1.66667" transform="rotate(-90 117.667 31)" fill="#F58319" />
+                    <circle cx="74.6667" cy="74.6667" r="1.66667" transform="rotate(-90 74.6667 74.6667)" fill="#F58319" />
+                    <circle cx="74.6667" cy="31" r="1.66667" transform="rotate(-90 74.6667 31)" fill="#F58319" />
+                    <circle cx="103" cy="74.6667" r="1.66667" transform="rotate(-90 103 74.6667)" fill="#F58319" />
+                    <circle cx="103" cy="31" r="1.66667" transform="rotate(-90 103 31)" fill="#F58319" />
+                    <circle cx="132" cy="74.6667" r="1.66667" transform="rotate(-90 132 74.6667)" fill="#F58319" />
+                    <circle cx="132" cy="31" r="1.66667" transform="rotate(-90 132 31)" fill="#F58319" />
+                    <circle cx="1.66667" cy="60.0002" r="1.66667" transform="rotate(-90 1.66667 60.0002)" fill="#F58319" />
+                    <circle cx="1.66667" cy="16.3335" r="1.66667" transform="rotate(-90 1.66667 16.3335)" fill="#F58319" />
+                    <circle cx="16.3333" cy="60.0002" r="1.66667" transform="rotate(-90 16.3333 60.0002)" fill="#F58319" />
+                    <circle cx="16.3333" cy="16.3335" r="1.66667" transform="rotate(-90 16.3333 16.3335)" fill="#F58319" />
+                    <circle cx="31" cy="60.0002" r="1.66667" transform="rotate(-90 31 60.0002)" fill="#F58319" />
+                    <circle cx="31" cy="16.3335" r="1.66667" transform="rotate(-90 31 16.3335)" fill="#F58319" />
+                    <circle cx="45.6667" cy="60.0002" r="1.66667" transform="rotate(-90 45.6667 60.0002)" fill="#F58319" />
+                    <circle cx="45.6667" cy="16.3335" r="1.66667" transform="rotate(-90 45.6667 16.3335)" fill="#F58319" />
+                    <circle cx="60.3333" cy="60.0002" r="1.66667" transform="rotate(-90 60.3333 60.0002)" fill="#F58319" />
+                    <circle cx="60.3333" cy="16.3335" r="1.66667" transform="rotate(-90 60.3333 16.3335)" fill="#F58319" />
+                    <circle cx="88.6667" cy="60.0002" r="1.66667" transform="rotate(-90 88.6667 60.0002)" fill="#F58319" />
+                    <circle cx="88.6667" cy="16.3335" r="1.66667" transform="rotate(-90 88.6667 16.3335)" fill="#F58319" />
+                    <circle cx="117.667" cy="60.0002" r="1.66667" transform="rotate(-90 117.667 60.0002)" fill="#F58319" />
+                    <circle cx="117.667" cy="16.3335" r="1.66667" transform="rotate(-90 117.667 16.3335)" fill="#F58319" />
+                    <circle cx="74.6667" cy="60.0002" r="1.66667" transform="rotate(-90 74.6667 60.0002)" fill="#F58319" />
+                    <circle cx="74.6667" cy="16.3335" r="1.66667" transform="rotate(-90 74.6667 16.3335)" fill="#F58319" />
+                    <circle cx="103" cy="60.0002" r="1.66667" transform="rotate(-90 103 60.0002)" fill="#F58319" />
+                    <circle cx="103" cy="16.3335" r="1.66667" transform="rotate(-90 103 16.3335)" fill="#F58319" />
+                    <circle cx="132" cy="60.0002" r="1.66667" transform="rotate(-90 132 60.0002)" fill="#F58319" />
+                    <circle cx="132" cy="16.3335" r="1.66667" transform="rotate(-90 132 16.3335)" fill="#F58319" />
+                    <circle cx="1.66667" cy="45.3335" r="1.66667" transform="rotate(-90 1.66667 45.3335)" fill="#F58319" />
+                    <circle cx="1.66667" cy="1.66671" r="1.66667" transform="rotate(-90 1.66667 1.66671)" fill="#F58319" />
+                    <circle cx="16.3333" cy="45.3335" r="1.66667" transform="rotate(-90 16.3333 45.3335)" fill="#F58319" />
+                    <circle cx="16.3333" cy="1.66671" r="1.66667" transform="rotate(-90 16.3333 1.66671)" fill="#F58319" />
+                    <circle cx="31" cy="45.3335" r="1.66667" transform="rotate(-90 31 45.3335)" fill="#F58319" />
+                    <circle cx="31" cy="1.66671" r="1.66667" transform="rotate(-90 31 1.66671)" fill="#F58319" />
+                    <circle cx="45.6667" cy="45.3335" r="1.66667" transform="rotate(-90 45.6667 45.3335)" fill="#F58319" />
+                    <circle cx="45.6667" cy="1.66671" r="1.66667" transform="rotate(-90 45.6667 1.66671)" fill="#F58319" />
+                    <circle cx="60.3333" cy="45.3337" r="1.66667" transform="rotate(-90 60.3333 45.3337)" fill="#F58319" />
+                    <circle cx="60.3333" cy="1.66695" r="1.66667" transform="rotate(-90 60.3333 1.66695)" fill="#F58319" />
+                    <circle cx="88.6667" cy="45.3337" r="1.66667" transform="rotate(-90 88.6667 45.3337)" fill="#F58319" />
+                    <circle cx="88.6667" cy="1.66695" r="1.66667" transform="rotate(-90 88.6667 1.66695)" fill="#F58319" />
+                    <circle cx="117.667" cy="45.3337" r="1.66667" transform="rotate(-90 117.667 45.3337)" fill="#F58319" />
+                    <circle cx="117.667" cy="1.66695" r="1.66667" transform="rotate(-90 117.667 1.66695)" fill="#F58319" />
+                    <circle cx="74.6667" cy="45.3337" r="1.66667" transform="rotate(-90 74.6667 45.3337)" fill="#F58319" />
+                    <circle cx="74.6667" cy="1.66695" r="1.66667" transform="rotate(-90 74.6667 1.66695)" fill="#F58319" />
+                    <circle cx="103" cy="45.3337" r="1.66667" transform="rotate(-90 103 45.3337)" fill="#F58319" />
+                    <circle cx="103" cy="1.66695" r="1.66667" transform="rotate(-90 103 1.66695)" fill="#F58319" />
+                    <circle cx="132" cy="45.3337" r="1.66667" transform="rotate(-90 132 45.3337)" fill="#F58319" />
+                    <circle cx="132" cy="1.66695" r="1.66667" transform="rotate(-90 132 1.66695)" fill="#F58319" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 md:w-1/2">
+            <div class="shadow-testimonial-5 relative mb-10 overflow-hidden rounded-lg bg-white p-8 sm:p-10 md:py-10 md:px-6 lg:p-10">
+              <div class="mb-8 flex items-center">
+                <div class="mr-5 h-20 w-full max-w-[80px] overflow-hidden rounded md:h-[60px] md:max-w-[60px] lg:h-20 lg:max-w-[80px]">
+                  <img src="src/assets/img/client-3.png" alt="image" class="w-full" />
+                </div>
+                <div class="w-full">
+                  <h5 class="text-dark mb-1 text-lg font-semibold">Jonathan L.</h5>
+                  <p class="text-body-color text-xs">London</p>
+                </div>
+              </div>
+              <p class="text-body-color text-base leading-relaxed">
+                “Überraschenderweise war ich früher ein Investor an der Wall Street. Und ich habe in meinen 10 Jahren bei der Firma nichts
+                Vergleichbares gesehen. Meine Kollegen dachten alle, ich wäre verrückt, als ich das Unternehmen verließ, um mich
+                vollzeitlich mit der HandelsTrader-Software zu beschäftigen. 384.594 € Gewinne später betteln alle meine Kollegen darum,
+                aufgenommen zu werden.”
+              </p>
+              <div>
+                <span class="absolute right-0 top-0">
+                  <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="1.66667" cy="104" r="1.66667" transform="rotate(-90 1.66667 104)" fill="#F58319" />
+                    <circle cx="16.3333" cy="104" r="1.66667" transform="rotate(-90 16.3333 104)" fill="#F58319" />
+                    <circle cx="31" cy="104" r="1.66667" transform="rotate(-90 31 104)" fill="#F58319" />
+                    <circle cx="45.6667" cy="104" r="1.66667" transform="rotate(-90 45.6667 104)" fill="#F58319" />
+                    <circle cx="60.3333" cy="104" r="1.66667" transform="rotate(-90 60.3333 104)" fill="#F58319" />
+                    <circle cx="88.6667" cy="104" r="1.66667" transform="rotate(-90 88.6667 104)" fill="#F58319" />
+                    <circle cx="117.667" cy="104" r="1.66667" transform="rotate(-90 117.667 104)" fill="#F58319" />
+                    <circle cx="74.6667" cy="104" r="1.66667" transform="rotate(-90 74.6667 104)" fill="#F58319" />
+                    <circle cx="103" cy="104" r="1.66667" transform="rotate(-90 103 104)" fill="#F58319" />
+                    <circle cx="132" cy="104" r="1.66667" transform="rotate(-90 132 104)" fill="#F58319" />
+                    <circle cx="1.66667" cy="89.3335" r="1.66667" transform="rotate(-90 1.66667 89.3335)" fill="#F58319" />
+                    <circle cx="16.3333" cy="89.3335" r="1.66667" transform="rotate(-90 16.3333 89.3335)" fill="#F58319" />
+                    <circle cx="31" cy="89.3335" r="1.66667" transform="rotate(-90 31 89.3335)" fill="#F58319" />
+                    <circle cx="45.6667" cy="89.3335" r="1.66667" transform="rotate(-90 45.6667 89.3335)" fill="#F58319" />
+                    <circle cx="60.3333" cy="89.3337" r="1.66667" transform="rotate(-90 60.3333 89.3337)" fill="#F58319" />
+                    <circle cx="88.6667" cy="89.3337" r="1.66667" transform="rotate(-90 88.6667 89.3337)" fill="#F58319" />
+                    <circle cx="117.667" cy="89.3337" r="1.66667" transform="rotate(-90 117.667 89.3337)" fill="#F58319" />
+                    <circle cx="74.6667" cy="89.3337" r="1.66667" transform="rotate(-90 74.6667 89.3337)" fill="#F58319" />
+                    <circle cx="103" cy="89.3337" r="1.66667" transform="rotate(-90 103 89.3337)" fill="#F58319" />
+                    <circle cx="132" cy="89.3337" r="1.66667" transform="rotate(-90 132 89.3337)" fill="#F58319" />
+                    <circle cx="1.66667" cy="74.667" r="1.66667" transform="rotate(-90 1.66667 74.667)" fill="#F58319" />
+                    <circle cx="1.66667" cy="31.0002" r="1.66667" transform="rotate(-90 1.66667 31.0002)" fill="#F58319" />
+                    <circle cx="16.3333" cy="74.667" r="1.66667" transform="rotate(-90 16.3333 74.667)" fill="#F58319" />
+                    <circle cx="16.3333" cy="31.0002" r="1.66667" transform="rotate(-90 16.3333 31.0002)" fill="#F58319" />
+                    <circle cx="31" cy="74.667" r="1.66667" transform="rotate(-90 31 74.667)" fill="#F58319" />
+                    <circle cx="31" cy="31.0002" r="1.66667" transform="rotate(-90 31 31.0002)" fill="#F58319" />
+                    <circle cx="45.6667" cy="74.667" r="1.66667" transform="rotate(-90 45.6667 74.667)" fill="#F58319" />
+                    <circle cx="45.6667" cy="31.0002" r="1.66667" transform="rotate(-90 45.6667 31.0002)" fill="#F58319" />
+                    <circle cx="60.3333" cy="74.6667" r="1.66667" transform="rotate(-90 60.3333 74.6667)" fill="#F58319" />
+                    <circle cx="60.3333" cy="31" r="1.66667" transform="rotate(-90 60.3333 31)" fill="#F58319" />
+                    <circle cx="88.6667" cy="74.6667" r="1.66667" transform="rotate(-90 88.6667 74.6667)" fill="#F58319" />
+                    <circle cx="88.6667" cy="31" r="1.66667" transform="rotate(-90 88.6667 31)" fill="#F58319" />
+                    <circle cx="117.667" cy="74.6667" r="1.66667" transform="rotate(-90 117.667 74.6667)" fill="#F58319" />
+                    <circle cx="117.667" cy="31" r="1.66667" transform="rotate(-90 117.667 31)" fill="#F58319" />
+                    <circle cx="74.6667" cy="74.6667" r="1.66667" transform="rotate(-90 74.6667 74.6667)" fill="#F58319" />
+                    <circle cx="74.6667" cy="31" r="1.66667" transform="rotate(-90 74.6667 31)" fill="#F58319" />
+                    <circle cx="103" cy="74.6667" r="1.66667" transform="rotate(-90 103 74.6667)" fill="#F58319" />
+                    <circle cx="103" cy="31" r="1.66667" transform="rotate(-90 103 31)" fill="#F58319" />
+                    <circle cx="132" cy="74.6667" r="1.66667" transform="rotate(-90 132 74.6667)" fill="#F58319" />
+                    <circle cx="132" cy="31" r="1.66667" transform="rotate(-90 132 31)" fill="#F58319" />
+                    <circle cx="1.66667" cy="60.0002" r="1.66667" transform="rotate(-90 1.66667 60.0002)" fill="#F58319" />
+                    <circle cx="1.66667" cy="16.3335" r="1.66667" transform="rotate(-90 1.66667 16.3335)" fill="#F58319" />
+                    <circle cx="16.3333" cy="60.0002" r="1.66667" transform="rotate(-90 16.3333 60.0002)" fill="#F58319" />
+                    <circle cx="16.3333" cy="16.3335" r="1.66667" transform="rotate(-90 16.3333 16.3335)" fill="#F58319" />
+                    <circle cx="31" cy="60.0002" r="1.66667" transform="rotate(-90 31 60.0002)" fill="#F58319" />
+                    <circle cx="31" cy="16.3335" r="1.66667" transform="rotate(-90 31 16.3335)" fill="#F58319" />
+                    <circle cx="45.6667" cy="60.0002" r="1.66667" transform="rotate(-90 45.6667 60.0002)" fill="#F58319" />
+                    <circle cx="45.6667" cy="16.3335" r="1.66667" transform="rotate(-90 45.6667 16.3335)" fill="#F58319" />
+                    <circle cx="60.3333" cy="60.0002" r="1.66667" transform="rotate(-90 60.3333 60.0002)" fill="#F58319" />
+                    <circle cx="60.3333" cy="16.3335" r="1.66667" transform="rotate(-90 60.3333 16.3335)" fill="#F58319" />
+                    <circle cx="88.6667" cy="60.0002" r="1.66667" transform="rotate(-90 88.6667 60.0002)" fill="#F58319" />
+                    <circle cx="88.6667" cy="16.3335" r="1.66667" transform="rotate(-90 88.6667 16.3335)" fill="#F58319" />
+                    <circle cx="117.667" cy="60.0002" r="1.66667" transform="rotate(-90 117.667 60.0002)" fill="#F58319" />
+                    <circle cx="117.667" cy="16.3335" r="1.66667" transform="rotate(-90 117.667 16.3335)" fill="#F58319" />
+                    <circle cx="74.6667" cy="60.0002" r="1.66667" transform="rotate(-90 74.6667 60.0002)" fill="#F58319" />
+                    <circle cx="74.6667" cy="16.3335" r="1.66667" transform="rotate(-90 74.6667 16.3335)" fill="#F58319" />
+                    <circle cx="103" cy="60.0002" r="1.66667" transform="rotate(-90 103 60.0002)" fill="#F58319" />
+                    <circle cx="103" cy="16.3335" r="1.66667" transform="rotate(-90 103 16.3335)" fill="#F58319" />
+                    <circle cx="132" cy="60.0002" r="1.66667" transform="rotate(-90 132 60.0002)" fill="#F58319" />
+                    <circle cx="132" cy="16.3335" r="1.66667" transform="rotate(-90 132 16.3335)" fill="#F58319" />
+                    <circle cx="1.66667" cy="45.3335" r="1.66667" transform="rotate(-90 1.66667 45.3335)" fill="#F58319" />
+                    <circle cx="1.66667" cy="1.66671" r="1.66667" transform="rotate(-90 1.66667 1.66671)" fill="#F58319" />
+                    <circle cx="16.3333" cy="45.3335" r="1.66667" transform="rotate(-90 16.3333 45.3335)" fill="#F58319" />
+                    <circle cx="16.3333" cy="1.66671" r="1.66667" transform="rotate(-90 16.3333 1.66671)" fill="#F58319" />
+                    <circle cx="31" cy="45.3335" r="1.66667" transform="rotate(-90 31 45.3335)" fill="#F58319" />
+                    <circle cx="31" cy="1.66671" r="1.66667" transform="rotate(-90 31 1.66671)" fill="#F58319" />
+                    <circle cx="45.6667" cy="45.3335" r="1.66667" transform="rotate(-90 45.6667 45.3335)" fill="#F58319" />
+                    <circle cx="45.6667" cy="1.66671" r="1.66667" transform="rotate(-90 45.6667 1.66671)" fill="#F58319" />
+                    <circle cx="60.3333" cy="45.3337" r="1.66667" transform="rotate(-90 60.3333 45.3337)" fill="#F58319" />
+                    <circle cx="60.3333" cy="1.66695" r="1.66667" transform="rotate(-90 60.3333 1.66695)" fill="#F58319" />
+                    <circle cx="88.6667" cy="45.3337" r="1.66667" transform="rotate(-90 88.6667 45.3337)" fill="#F58319" />
+                    <circle cx="88.6667" cy="1.66695" r="1.66667" transform="rotate(-90 88.6667 1.66695)" fill="#F58319" />
+                    <circle cx="117.667" cy="45.3337" r="1.66667" transform="rotate(-90 117.667 45.3337)" fill="#F58319" />
+                    <circle cx="117.667" cy="1.66695" r="1.66667" transform="rotate(-90 117.667 1.66695)" fill="#F58319" />
+                    <circle cx="74.6667" cy="45.3337" r="1.66667" transform="rotate(-90 74.6667 45.3337)" fill="#F58319" />
+                    <circle cx="74.6667" cy="1.66695" r="1.66667" transform="rotate(-90 74.6667 1.66695)" fill="#F58319" />
+                    <circle cx="103" cy="45.3337" r="1.66667" transform="rotate(-90 103 45.3337)" fill="#F58319" />
+                    <circle cx="103" cy="1.66695" r="1.66667" transform="rotate(-90 103 1.66695)" fill="#F58319" />
+                    <circle cx="132" cy="45.3337" r="1.66667" transform="rotate(-90 132 45.3337)" fill="#F58319" />
+                    <circle cx="132" cy="1.66695" r="1.66667" transform="rotate(-90 132 1.66695)" fill="#F58319" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 md:w-1/2">
+            <div class="shadow-testimonial-5 relative mb-10 overflow-hidden rounded-lg bg-white p-8 sm:p-10 md:py-10 md:px-6 lg:p-10">
+              <div class="mb-8 flex items-center">
+                <div class="mr-5 h-20 w-full max-w-[80px] overflow-hidden rounded md:h-[60px] md:max-w-[60px] lg:h-20 lg:max-w-[80px]">
+                  <img src="src/assets/img/client-4.png" alt="image" class="w-full" />
+                </div>
+                <div class="w-full">
+                  <h5 class="text-dark mb-1 text-lg font-semibold">Bradley F.</h5>
+                  <p class="text-body-color text-xs">New York</p>
+                </div>
+              </div>
+              <p class="text-body-color text-base leading-relaxed">
+                “Vor zwei Wochen wurde ich gefeuert. Ohne weitere Optionen dachte ich, mein Leben wäre vorbei. Jetzt verdiene ich jeden Tag
+                über 13.261,42 €. Und zum ersten Mal seit 2 Monaten ist mein Konto nicht überzogen. Danke, HandelsTrader!”
+              </p>
+              <div>
+                <span class="absolute right-0 top-0">
+                  <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="1.66667" cy="104" r="1.66667" transform="rotate(-90 1.66667 104)" fill="#F58319" />
+                    <circle cx="16.3333" cy="104" r="1.66667" transform="rotate(-90 16.3333 104)" fill="#F58319" />
+                    <circle cx="31" cy="104" r="1.66667" transform="rotate(-90 31 104)" fill="#F58319" />
+                    <circle cx="45.6667" cy="104" r="1.66667" transform="rotate(-90 45.6667 104)" fill="#F58319" />
+                    <circle cx="60.3333" cy="104" r="1.66667" transform="rotate(-90 60.3333 104)" fill="#F58319" />
+                    <circle cx="88.6667" cy="104" r="1.66667" transform="rotate(-90 88.6667 104)" fill="#F58319" />
+                    <circle cx="117.667" cy="104" r="1.66667" transform="rotate(-90 117.667 104)" fill="#F58319" />
+                    <circle cx="74.6667" cy="104" r="1.66667" transform="rotate(-90 74.6667 104)" fill="#F58319" />
+                    <circle cx="103" cy="104" r="1.66667" transform="rotate(-90 103 104)" fill="#F58319" />
+                    <circle cx="132" cy="104" r="1.66667" transform="rotate(-90 132 104)" fill="#F58319" />
+                    <circle cx="1.66667" cy="89.3335" r="1.66667" transform="rotate(-90 1.66667 89.3335)" fill="#F58319" />
+                    <circle cx="16.3333" cy="89.3335" r="1.66667" transform="rotate(-90 16.3333 89.3335)" fill="#F58319" />
+                    <circle cx="31" cy="89.3335" r="1.66667" transform="rotate(-90 31 89.3335)" fill="#F58319" />
+                    <circle cx="45.6667" cy="89.3335" r="1.66667" transform="rotate(-90 45.6667 89.3335)" fill="#F58319" />
+                    <circle cx="60.3333" cy="89.3337" r="1.66667" transform="rotate(-90 60.3333 89.3337)" fill="#F58319" />
+                    <circle cx="88.6667" cy="89.3337" r="1.66667" transform="rotate(-90 88.6667 89.3337)" fill="#F58319" />
+                    <circle cx="117.667" cy="89.3337" r="1.66667" transform="rotate(-90 117.667 89.3337)" fill="#F58319" />
+                    <circle cx="74.6667" cy="89.3337" r="1.66667" transform="rotate(-90 74.6667 89.3337)" fill="#F58319" />
+                    <circle cx="103" cy="89.3337" r="1.66667" transform="rotate(-90 103 89.3337)" fill="#F58319" />
+                    <circle cx="132" cy="89.3337" r="1.66667" transform="rotate(-90 132 89.3337)" fill="#F58319" />
+                    <circle cx="1.66667" cy="74.667" r="1.66667" transform="rotate(-90 1.66667 74.667)" fill="#F58319" />
+                    <circle cx="1.66667" cy="31.0002" r="1.66667" transform="rotate(-90 1.66667 31.0002)" fill="#F58319" />
+                    <circle cx="16.3333" cy="74.667" r="1.66667" transform="rotate(-90 16.3333 74.667)" fill="#F58319" />
+                    <circle cx="16.3333" cy="31.0002" r="1.66667" transform="rotate(-90 16.3333 31.0002)" fill="#F58319" />
+                    <circle cx="31" cy="74.667" r="1.66667" transform="rotate(-90 31 74.667)" fill="#F58319" />
+                    <circle cx="31" cy="31.0002" r="1.66667" transform="rotate(-90 31 31.0002)" fill="#F58319" />
+                    <circle cx="45.6667" cy="74.667" r="1.66667" transform="rotate(-90 45.6667 74.667)" fill="#F58319" />
+                    <circle cx="45.6667" cy="31.0002" r="1.66667" transform="rotate(-90 45.6667 31.0002)" fill="#F58319" />
+                    <circle cx="60.3333" cy="74.6667" r="1.66667" transform="rotate(-90 60.3333 74.6667)" fill="#F58319" />
+                    <circle cx="60.3333" cy="31" r="1.66667" transform="rotate(-90 60.3333 31)" fill="#F58319" />
+                    <circle cx="88.6667" cy="74.6667" r="1.66667" transform="rotate(-90 88.6667 74.6667)" fill="#F58319" />
+                    <circle cx="88.6667" cy="31" r="1.66667" transform="rotate(-90 88.6667 31)" fill="#F58319" />
+                    <circle cx="117.667" cy="74.6667" r="1.66667" transform="rotate(-90 117.667 74.6667)" fill="#F58319" />
+                    <circle cx="117.667" cy="31" r="1.66667" transform="rotate(-90 117.667 31)" fill="#F58319" />
+                    <circle cx="74.6667" cy="74.6667" r="1.66667" transform="rotate(-90 74.6667 74.6667)" fill="#F58319" />
+                    <circle cx="74.6667" cy="31" r="1.66667" transform="rotate(-90 74.6667 31)" fill="#F58319" />
+                    <circle cx="103" cy="74.6667" r="1.66667" transform="rotate(-90 103 74.6667)" fill="#F58319" />
+                    <circle cx="103" cy="31" r="1.66667" transform="rotate(-90 103 31)" fill="#F58319" />
+                    <circle cx="132" cy="74.6667" r="1.66667" transform="rotate(-90 132 74.6667)" fill="#F58319" />
+                    <circle cx="132" cy="31" r="1.66667" transform="rotate(-90 132 31)" fill="#F58319" />
+                    <circle cx="1.66667" cy="60.0002" r="1.66667" transform="rotate(-90 1.66667 60.0002)" fill="#F58319" />
+                    <circle cx="1.66667" cy="16.3335" r="1.66667" transform="rotate(-90 1.66667 16.3335)" fill="#F58319" />
+                    <circle cx="16.3333" cy="60.0002" r="1.66667" transform="rotate(-90 16.3333 60.0002)" fill="#F58319" />
+                    <circle cx="16.3333" cy="16.3335" r="1.66667" transform="rotate(-90 16.3333 16.3335)" fill="#F58319" />
+                    <circle cx="31" cy="60.0002" r="1.66667" transform="rotate(-90 31 60.0002)" fill="#F58319" />
+                    <circle cx="31" cy="16.3335" r="1.66667" transform="rotate(-90 31 16.3335)" fill="#F58319" />
+                    <circle cx="45.6667" cy="60.0002" r="1.66667" transform="rotate(-90 45.6667 60.0002)" fill="#F58319" />
+                    <circle cx="45.6667" cy="16.3335" r="1.66667" transform="rotate(-90 45.6667 16.3335)" fill="#F58319" />
+                    <circle cx="60.3333" cy="60.0002" r="1.66667" transform="rotate(-90 60.3333 60.0002)" fill="#F58319" />
+                    <circle cx="60.3333" cy="16.3335" r="1.66667" transform="rotate(-90 60.3333 16.3335)" fill="#F58319" />
+                    <circle cx="88.6667" cy="60.0002" r="1.66667" transform="rotate(-90 88.6667 60.0002)" fill="#F58319" />
+                    <circle cx="88.6667" cy="16.3335" r="1.66667" transform="rotate(-90 88.6667 16.3335)" fill="#F58319" />
+                    <circle cx="117.667" cy="60.0002" r="1.66667" transform="rotate(-90 117.667 60.0002)" fill="#F58319" />
+                    <circle cx="117.667" cy="16.3335" r="1.66667" transform="rotate(-90 117.667 16.3335)" fill="#F58319" />
+                    <circle cx="74.6667" cy="60.0002" r="1.66667" transform="rotate(-90 74.6667 60.0002)" fill="#F58319" />
+                    <circle cx="74.6667" cy="16.3335" r="1.66667" transform="rotate(-90 74.6667 16.3335)" fill="#F58319" />
+                    <circle cx="103" cy="60.0002" r="1.66667" transform="rotate(-90 103 60.0002)" fill="#F58319" />
+                    <circle cx="103" cy="16.3335" r="1.66667" transform="rotate(-90 103 16.3335)" fill="#F58319" />
+                    <circle cx="132" cy="60.0002" r="1.66667" transform="rotate(-90 132 60.0002)" fill="#F58319" />
+                    <circle cx="132" cy="16.3335" r="1.66667" transform="rotate(-90 132 16.3335)" fill="#F58319" />
+                    <circle cx="1.66667" cy="45.3335" r="1.66667" transform="rotate(-90 1.66667 45.3335)" fill="#F58319" />
+                    <circle cx="1.66667" cy="1.66671" r="1.66667" transform="rotate(-90 1.66667 1.66671)" fill="#F58319" />
+                    <circle cx="16.3333" cy="45.3335" r="1.66667" transform="rotate(-90 16.3333 45.3335)" fill="#F58319" />
+                    <circle cx="16.3333" cy="1.66671" r="1.66667" transform="rotate(-90 16.3333 1.66671)" fill="#F58319" />
+                    <circle cx="31" cy="45.3335" r="1.66667" transform="rotate(-90 31 45.3335)" fill="#F58319" />
+                    <circle cx="31" cy="1.66671" r="1.66667" transform="rotate(-90 31 1.66671)" fill="#F58319" />
+                    <circle cx="45.6667" cy="45.3335" r="1.66667" transform="rotate(-90 45.6667 45.3335)" fill="#F58319" />
+                    <circle cx="45.6667" cy="1.66671" r="1.66667" transform="rotate(-90 45.6667 1.66671)" fill="#F58319" />
+                    <circle cx="60.3333" cy="45.3337" r="1.66667" transform="rotate(-90 60.3333 45.3337)" fill="#F58319" />
+                    <circle cx="60.3333" cy="1.66695" r="1.66667" transform="rotate(-90 60.3333 1.66695)" fill="#F58319" />
+                    <circle cx="88.6667" cy="45.3337" r="1.66667" transform="rotate(-90 88.6667 45.3337)" fill="#F58319" />
+                    <circle cx="88.6667" cy="1.66695" r="1.66667" transform="rotate(-90 88.6667 1.66695)" fill="#F58319" />
+                    <circle cx="117.667" cy="45.3337" r="1.66667" transform="rotate(-90 117.667 45.3337)" fill="#F58319" />
+                    <circle cx="117.667" cy="1.66695" r="1.66667" transform="rotate(-90 117.667 1.66695)" fill="#F58319" />
+                    <circle cx="74.6667" cy="45.3337" r="1.66667" transform="rotate(-90 74.6667 45.3337)" fill="#F58319" />
+                    <circle cx="74.6667" cy="1.66695" r="1.66667" transform="rotate(-90 74.6667 1.66695)" fill="#F58319" />
+                    <circle cx="103" cy="45.3337" r="1.66667" transform="rotate(-90 103 45.3337)" fill="#F58319" />
+                    <circle cx="103" cy="1.66695" r="1.66667" transform="rotate(-90 103 1.66695)" fill="#F58319" />
+                    <circle cx="132" cy="45.3337" r="1.66667" transform="rotate(-90 132 45.3337)" fill="#F58319" />
+                    <circle cx="132" cy="1.66695" r="1.66667" transform="rotate(-90 132 1.66695)" fill="#F58319" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Testimonials Section End -->
+
+    <!-- ====== Footer Section Start -->
+    <footer class="relative z-10">
+      <span class="bg-primary absolute left-0 top-0 block h-2 w-1/2"></span>
+      <span class="bg-secondary absolute right-0 top-0 block h-2 w-1/2"></span>
+
+      <div class="mt-12 bg-dark py-8 lg:mt-[60px]">
+        <div class="container mx-auto">
+          <div class="-mx-4 flex flex-wrap">
+            <div class="w-full px-4 md:w-1/3 lg:w-1/2">
+              <div class="my-1 flex justify-center md:justify-start">
+                <p class="text-base text-[#CACBCF]">Copyright &copy; 2023 HandelsTrader. All Rights Reserved.</p>
+              </div>
+            </div>
+            <div class="w-full px-4 md:w-2/3 lg:w-1/2">
+              <div class="my-1">
+                <div class="-mx-3 flex flex-wrap items-center justify-center md:justify-end">
+                  <a href="javascript:void(0)" class="px-3 text-base text-[#CACBCF] hover:text-white">Privacy policy</a>
+                  <a href="javascript:void(0)" class="px-3 text-base text-[#CACBCF] hover:text-white">Terms of service</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ====== Footer Section End -->
+
+    <script type="module" src="src/main.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </body>
+</html>
