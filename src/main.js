@@ -47,14 +47,13 @@ const renderAvailableDialCodes = () => {
     listElement.classList.add("items-center");
     listElement.classList.add("gap-4");
     listElement.classList.add("cursor-pointer");
-    listElement.classList.add("hover:bg-primary");
-    listElement.classList.add("hover:text-white");
+    listElement.classList.add("hover:bg-[#F58319]");
     listElement.value = country.dialCode;
 
-    listElement.innerHTML = `<div style='width:20px; flex-shrink:0;'>${country.flag}</div> <span>${country.country} ${country.dialCode}`;
+    listElement.innerHTML = `<div style='width:20px; flex-shrink:0;'>${country.flag}</div> <span class='font-bold'>${country.country} ${country.dialCode}`;
 
     listElement.addEventListener("click", () => {
-      selectCountryDropdownBtn.innerHTML = `<div style='width:20px; flex-shrink:0;'>${country.flag}</div> <span>${country.dialCode}</span>`;
+      selectCountryDropdownBtn.innerHTML = `<div style='width:20px; flex-shrink:0;'>${country.flag}</div> <span class='font-bold'>${country.dialCode}</span>`;
       selectCountryDropdownBtn.setAttribute("data-dial-code", country.dialCode);
     });
 
