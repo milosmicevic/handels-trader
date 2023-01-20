@@ -334,7 +334,10 @@
         x-transition
         class="fixed top-0 left-0 z-50 flex h-screen w-full items-center justify-center bg-black bg-opacity-70"
       >
-        <div @click.outside="videoOpen = false" class="mx-auto w-full max-w-[550px] bg-white">
+        <div
+          @click.outside="videoOpen = false; document.querySelector('.intro-video').pause()"
+          class="mx-auto w-full max-w-[550px] bg-white"
+        >
           <video class="intro-video" playsinline="" controls="" preload="">
             <source src="./src/assets/video/video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
