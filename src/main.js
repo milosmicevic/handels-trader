@@ -47,7 +47,7 @@ const renderAvailableDialCodes = () => {
     listElement.classList.add("items-center");
     listElement.classList.add("gap-4");
     listElement.classList.add("cursor-pointer");
-    listElement.classList.add("hover:bg-[#F58319]");
+    listElement.classList.add("hover:bg-[#8319f5]");
     listElement.value = country.dialCode;
 
     listElement.innerHTML = `<div style='width:20px; flex-shrink:0;'>${country.flag}</div> <span class='font-bold'>${country.country} ${country.dialCode}`;
